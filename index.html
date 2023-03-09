@@ -39,6 +39,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
 
 	//YOUR JAVASCRIPT GOES HERE
+	//sets variables = 0
+        var allergy_count = 0;
+        var cold_count = 0;
+
+	//this function adds 1 to the allergy count whenever the function is called to 
+        function allergyAdd(){
+            allergy_count = allergy_count + 1;
+		alert(allergy_count);
+        }//end of allergyAdd
+	
+	//this function adds 1 to the cold count whenever the function is called to 
+        function coldAdd(){
+            cold_count = cold_count + 1;
+	}//end of coldAdd
+		
+		//this function calculates the percentage of questions that determine whether the symptoms indicate allergy or cold
+	function getResult() {
+    		var allergyPercent = (allergy_count/4)*100; //divides the allergy count by the total number of questons asked (4) and converts to percentage.
+    		var coldPercent = (cold_count/4)*100; //divides the cold count by the total number of questons asked (4) and converts to percentage
+    		var resultText = document.getElementById("results");
+    resultText.innerHTML = "Percentage it is allergies =" + allergyPercent + "<br> Percentage it is a cold =" + coldPercent;
+        }
 
 </script>	
 
