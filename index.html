@@ -40,26 +40,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	//YOUR JAVASCRIPT GOES HERE
 	//sets variables = 0
-        var allergy_count = 0;
-        var cold_count = 0;
+        var asthma_count = 0;
+        var bronchitis_count = 0;
 
-	//this function adds 1 to the allergy count whenever the function is called to 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
-        }//end of allergyAdd
+	//this function adds 1 to the asthma count whenever the function is called to 
+        function asthmaAdd(){
+            asthma_count = asthma_count + 1;
+		alert(asthma_count);
+        }//end of asthmaAdd
 	
-	//this function adds 1 to the cold count whenever the function is called to 
-        function coldAdd(){
-            cold_count = cold_count + 1;
-	}//end of coldAdd
+	//this function adds 1 to the bronchitis count whenever the function is called to 
+        function bronchitisAdd(){
+            bronchitis_count = bronchitis_count + 1;
+	}//end of bronchitisAdd
 		
-		//this function calculates the percentage of questions that determine whether the symptoms indicate allergy or cold
+		//this function calculates the percentage of questions that determine whether the symptoms indicate asthma or bronchitis
 	function getResult() {
-    		var allergyPercent = (allergy_count/6)*100; //divides the allergy count by the total number of questons asked (4) and converts to percentage.
-    		var coldPercent = (cold_count/6)*100; //divides the cold count by the total number of questons asked (4) and converts to percentage
+    		var asthmaPercent = (asthma_count/6)*100; //divides the asthma count by the total number of questons asked (4) and converts to percentage.
+    		var bronchitisPercent = (bronchitis_count/6)*100; //divides the bronchitis count by the total number of questons asked (4) and converts to percentage
     		var resultText = document.getElementById("results");
-    resultText.innerHTML = "Percentage it is allergies =" + allergyPercent + "<br> Percentage it is a cold =" + coldPercent;
+    resultText.innerHTML = "Percentage it is asthma =" + asthmaPercent + "<br> Percentage it is a bronchitis =" + bronchitisPercent;
         }
 
 </script>	
@@ -93,11 +93,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
 	
 	<div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>bronchitis or asthma?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have bronchitis but wonder if it is asthma? Answer a few short questions to find out!</p>
 	<!--this button opens the app-->
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -112,13 +112,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       </div>
 
       <div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p> <!--Question 1-->
+        <p>Are you experiencing chest tightness?</p> <!--Question 1-->
 	      <!--Yes and No buttons for user to press in response to the question-->
 	      <!--send user to next page-->
-        <a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-	      <!--adds one to allergy count if user selects yes to this question, -->
-        <a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
-	      <!--adds one to cold count if user selects no to this question, -->
+        <a href="#two" onclick="asthmaAdd();" class="w3-btn w3-black"> Yes </a>
+	      <!--adds one to asthma count if user selects yes to this question, -->
+        <a href="#two" onclick="bronchitisAdd();" class="w3-btn w3-black"> No </a>
+	      <!--adds one to bronchitis count if user selects no to this question, -->
 
       </div>
     </div>
@@ -133,13 +133,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
       <div id="content" class="w3-container">
         
-        <p>Do you have a fever?</p> <!--Question 2-->
+        <p>Do you have a productive cough (cough with phlegm or mucus produced)?</p> <!--Question 2-->
 	       <!--Yes and No buttons for user to press in response to the question-->
 	      <!--send user to next page-->
-        <a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	      <!--adds one to cold count if user selects no to this question, -->
-        <a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
-	      <!--adds one to allergy count if user selects yes to this question, -->
+        <a href="#three" onclick="bronchitisAdd();" class="w3-btn w3-black"> Yes </a>
+	      <!--adds one to bronchitis count if user selects no to this question, -->
+        <a href="#three" onclick="asthmaAdd();" class="w3-btn w3-black"> No </a>
+	      <!--adds one to asthma count if user selects yes to this question, -->
       </div>
     </div>
 	<!--End of Page 2-->
@@ -153,13 +153,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
       <div id="content" class="w3-container">
         
-        <p>Do you have a sore throat?</p> <!--Question 3-->
+        <p>Do you have a fever?</p> <!--Question 3-->
 	      <!--Yes and No buttons for user to press in response to the question-->
 	      <!--send user to next page-->
-        <a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	      <!--adds one to allergy count if user selects yes to this question, -->
-        <a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
-	      <!--adds one to cold count if user selects no to this question, -->
+        <a href="#four" onclick="bronchitisAdd();" class="w3-btn w3-black"> Yes </a>
+	      <!--adds one to asthma count if user selects yes to this question, -->
+        <a href="#four" onclick="asthmaAdd();" class="w3-btn w3-black"> No </a>
+	      <!--adds one to bronchitis count if user selects no to this question, -->
       </div>
     </div>
 	<!--End of Page 3-->
@@ -173,54 +173,35 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
       <div id="content" class="w3-container"> 
         
-        <p>Are your symptoms seasonal or chronic?</p> <!--Question 4-->
+        <p>Are you experiencing symptoms that are worse at night or in the early morning?</p> <!--Question 4-->
 	      <!--Yes and No buttons for user to press in response to the question-->
 	      <!--send user to next page-->
-        <a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-	      <!--adds one to allergy count if user selects yes to this question, -->
-        <a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
-	      <!--adds one to cold count if user selects no to this question, -->
+        <a href="#five" onclick="asthmaAdd();" class="w3-btn w3-black"> Yes </a>
+	      <!--adds one to asthma count if user selects yes to this question, -->
+        <a href="#five" onclick="bronchitisAdd();" class="w3-btn w3-black"> No </a>
+	      <!--adds one to bronchitis count if user selects no to this question, -->
       </div>
     </div>
 	<!--End of Page 4-->
 
-      <!-- New Cold Question-->
+      <!-- New bronchitis Question-->
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 5</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have body aches?</p> <!--Question 5-->
+		<p>Are you feeling fatigue or weakness?</p> <!--Question 5-->
 			<!--Yes and No buttons for user to press in response to the question-->
 			<!--send user to next page-->
-			<a href="#six" class="w3-btn w3-grey w3-round" onclick="coldAdd()"> Yes </a>
-			<!--If user selects Yes to this question, add one to cold count-->
-			<a href="#six" class="w3-btn w3-grey w3-round" onclick="allergyAdd()"> No </a>
-			<!--If user selects No to this question, add one to allergy count-->
+			<a href="#results" class="w3-btn w3-grey w3-round" onclick="bronchitisAdd()"> Yes </a>
+			<!--If user selects Yes to this question, add one to bronchitis count-->
+			<a href="#results" class="w3-btn w3-grey w3-round" onclick="asthmaAdd()"> No </a>
+			<!--If user selects No to this question, add one to asthma count-->
 	</div>
 </div>	
-<!--End of Page 5-->
 	
-<!--New Allergy Question-->
-<div class="page" id="six">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p>Do you have a skin rash or hives?</p> <!--Question 6-->
-			<!--Yes and No buttons for user to press in response to the question-->
-			<!--send user to next page-->
-			<a href="#results" class="w3-btn w3-grey w3-round" onclick="allergyAdd()"> Yes </a>
-			<!--If user selects Yes to this question, add one to allergy count-->
-			<a href="#results" class="w3-btn w3-grey w3-round" onclick="coldAdd()"> No </a>
-			<!--If user selects No to this question, add one to cold count-->
-	</div>
-</div>	
-<!--End of Page 6-->
-	
-<!--Page 7 Content Below (Results Page)-->
+<!--Page 6 Content Below (Results Page)-->
 <div class="page" id="results">
 	
 
@@ -239,7 +220,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p id="results"></p>
 	</div>
 </div>
-<!--End of Page 7-->
+<!--End of Page 6-->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
