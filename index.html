@@ -56,8 +56,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		//this function calculates the percentage of questions that determine whether the symptoms indicate asthma or bronchitis
 	function getResult() {
-    		var asthmaPercent = (asthma_count/6)*100; //divides the asthma count by the total number of questons asked (4) and converts to percentage.
-    		var bronchitisPercent = (bronchitis_count/6)*100; //divides the bronchitis count by the total number of questons asked (4) and converts to percentage
+    		var asthmaPercent = (asthma_count/6)*100; //divides the asthma count by the total number of questons asked (6) and converts to percentage.
+    		var bronchitisPercent = (bronchitis_count/6)*100; //divides the bronchitis count by the total number of questons asked (6) and converts to percentage
     		var resultText = document.getElementById("results");
     resultText.innerHTML = "Percentage it is asthma =" + asthmaPercent + "<br> Percentage it is a bronchitis =" + bronchitisPercent;
         }
@@ -194,14 +194,33 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are you feeling fatigue or weakness?</p> <!--Question 5-->
 			<!--Yes and No buttons for user to press in response to the question-->
 			<!--send user to next page-->
-			<a href="#results" class="w3-btn w3-grey w3-round" onclick="bronchitisAdd()"> Yes </a>
+			<a href="#six" class="w3-btn w3-grey w3-round" onclick="bronchitisAdd()"> Yes </a>
 			<!--If user selects Yes to this question, add one to bronchitis count-->
-			<a href="#results" class="w3-btn w3-grey w3-round" onclick="asthmaAdd()"> No </a>
+			<a href="#six" class="w3-btn w3-grey w3-round" onclick="asthmaAdd()"> No </a>
 			<!--If user selects No to this question, add one to asthma count-->
 	</div>
 </div>	
+	<!--End of Page 5-->
 	
-<!--Page 6 Content Below (Results Page)-->
+	<!--New Asthma Question-->
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Are your symptoms triggered by specific triggers like exercise, allergies, cold air, or stress?</p> <!--Question 6-->
+			<!--Yes and No buttons for user to press in response to the question-->
+			<!--send user to next page-->
+			<a href="#results" class="w3-btn w3-grey w3-round" onclick="asthmaAdd()"> Yes </a>
+			<!--If user selects Yes to this question, add one to asthma count-->
+			<a href="#results" class="w3-btn w3-grey w3-round" onclick="bronchitisAdd()"> No </a>
+			<!--If user selects No to this question, add one to bronchitis count-->
+	</div>
+</div>	
+<!--End of Page 6-->
+	
+<!--Page 7 (Results Page)-->
 <div class="page" id="results">
 	
 
@@ -220,7 +239,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p id="results"></p>
 	</div>
 </div>
-<!--End of Page 6-->
+<!--End of Page 7-->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
